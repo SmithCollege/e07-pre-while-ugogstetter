@@ -5,23 +5,10 @@ secret_n = 2
 
 def guessing_game():
     in_n = int(input("guess an integer: "))
-    if in_n == secret_n:
-        print("You Win!")
-        sys.exit()
-    else:
-      print("Try again")
-    in_n = int(input("guess an integer: "))
-    if in_n == secret_n:
-        print("You Win!")
-        sys.exit()
-    else:
-      print("Try again")
-    in_n = int(input("guess an integer: "))
-    if in_n == secret_n:
-        print("You Win!")
-        sys.exit()
-    else:
-      print("Try again")
+    while in_n != secret_n:
+        print("Try again")
+        in_n = int(input("guess an integer: "))
+    print("You Win!")
 
 def main():
     guessing_game()
